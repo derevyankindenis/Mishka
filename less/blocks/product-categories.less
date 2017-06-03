@@ -1,0 +1,37 @@
+.product-categories {
+  min-width: 320px;
+  position: relative;
+}
+
+@media @tablet-width {
+  .product-categories {
+    .wrapper();
+    display: flex;
+    margin-top: -118px;
+  }
+  
+   .product-categories::after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 5;
+      width: 100%;
+      height: 38px;
+      left: 0;
+      bottom: -27px;
+      background-size: contain;
+      background-repeat: repeat-x;
+      background-image: url("../img/bg-zigzag-fill.svg");
+  }
+  
+}
+
+@media @desktop-width {
+  .product-categories::before {
+    bottom: -15px;
+  }
+  
+  .product-categories::after {
+    bottom: -23px;
+  }
+}

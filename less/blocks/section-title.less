@@ -1,0 +1,88 @@
+.section-title {
+  margin: 0;
+  padding-bottom: 32px;
+  font-size: @size-aboutus-title;
+}
+
+.section-title--responses {
+  padding-bottom: 25px;
+}
+
+.section-title--contacts {
+  font-size: @size-sectiontitle--contacts;
+  padding-bottom: 38px;
+}
+
+.section-title--about-us {
+  .wrapper();
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media @tablet-width {
+  
+  .section-title {
+    font-size: 43px;
+    padding-bottom: 33px;
+    margin-left: -5px;
+  }
+  
+  .section-title--about-us {
+    width: 770px;
+    margin: 0 auto;
+  }
+  
+  .section-title--responses {
+    padding-bottom: 50px;
+  }
+  
+  .section-title--contacts {
+    position: relative;
+    width: 667px;
+    padding-bottom: 50px;
+  }
+  
+  .section-title--contacts::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    top: -50px;
+    right: -4px;
+    background-image: url("../img/icon/icon-flag.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+}
+
+
+@media @desktop-width {
+  .section-title--about-us {
+    font-size: 53px;
+    width: 800px;
+    padding-left: 43px;
+  }
+  
+  .section-title--responses {
+    font-size: 53px;
+    padding-bottom: 48px;
+  }
+  
+  .section-title--contacts {
+    font-size: 53px;
+    margin-top: 113px;
+    margin-left: 167px;
+    width: 353px;
+    padding-bottom: 48px;
+  }
+  
+  .section-title--contacts::after {
+    left: -106px;
+    top: -40px;
+  }
+}
+
+
+  

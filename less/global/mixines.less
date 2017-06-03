@@ -1,0 +1,76 @@
+.clearfix() {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
+.container() {
+  width: 320px;
+  margin: 0 auto;
+  
+  @media @tablet-width {
+    width: 768px;
+  }
+
+  @media @desktop-width {
+    width: 1150px;
+  }
+  
+}
+
+.wrapper() {
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-right: 30px;
+  
+  @media @tablet-width {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+}
+
+.resize(@width; @height){
+  width: @width;
+  height: @height;
+}
+
+.verticalpadding(@top; @bottom) {
+  padding-top: @top;
+  padding-bottom: @bottom;
+}
+
+.horizontalpadding(@left; @right) {
+  padding-left: @left;
+  padding-right: @right;
+}
+
+//Задаём иконки каждому элементу
+//classname - класс, k - номер дочернего элемента
+.seticon(@classname, @k) when (@k > 0) {
+  .@{classname}:nth-child(@{k})::after {
+    content: "";
+    position: absolute;
+    width: 55px;
+    height: 42px;
+    top: 0;
+    left: 0;
+    background-image: url("../img/icon/icon-feature-@{k}.svg");
+    background-repeat: no-repeat;
+  }
+  .seticon(@classname, @k - 1);
+}
+
+.clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.outline() {
+  outline: 1px solid red;
+}

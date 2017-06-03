@@ -1,0 +1,110 @@
+.responses {
+  min-width: 320px;
+  .wrapper();
+  .verticalpadding(2px, 40px);
+  background-color: white;
+  font-size: 0; //убираем отступы у блочно-строчных
+}
+
+.responses__list {
+  margin: 0;
+  margin-bottom: 35px;
+  padding: 0;
+  list-style: none;
+}
+
+.responses__item-quotation {
+  margin: 0;
+  padding: 0;
+}
+
+.responses__item-text {
+  margin: 0px;
+  font-size: @size-responses-text;
+  line-height: @size-responses-text-line;
+}
+
+.responses__item-footer {
+  padding-top: 26px;
+}
+
+.responses__item-author {
+  font-style: normal;
+}
+
+.responses__item-author-name {
+  display: block;
+  font-size: @size-responses-authorname;
+  font-weight: bold;
+  line-height: @size-responses-authorname-lineh;
+  margin-bottom: 10px;
+}
+
+.responses__item-author-link {
+  font-size: @size-responses-authorlink;
+  ine-height: @size-responses-authorlink-lineh;
+  text-decoration: none;
+  color: @color-responses-authorlink;
+  display: block;
+}
+
+@media @mobile-max-width {
+  .responses__item-text {
+    margin: 0 auto;
+    max-width: 450px;
+  }
+}
+
+@media @tablet-width {
+  
+  .responses {
+    .container();
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 190px; 
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 3px;
+    background-size: 351px 457px;
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
+  }
+  
+  .responses__item-text {
+    font-size: 17px;
+  }
+  
+  .responses__item-footer {
+    float: left;
+    padding-top: 56px;
+  }
+  
+  .responses__item-author-name {
+    font-size: 17px;
+  }
+  
+}
+
+@media @desktop-width {
+  
+  .responses {
+    padding-top: 78px;
+    padding-left: 222px;
+    padding-right: 60px;
+  }
+  
+  .responses__item-text {
+    width: 772px;
+    font-size: 17px;
+  }
+  
+  .responses__item-footer {
+    padding-top: 38px;
+  }
+  
+  .responses {
+    background-position: 45px 10px;
+  }
+
+}

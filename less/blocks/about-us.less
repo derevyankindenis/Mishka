@@ -1,0 +1,106 @@
+.about-us {
+
+  .verticalpadding(32px, 25px);
+}
+
+.about-us__features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  .container();
+  .wrapper();
+}
+
+.about-us__features-item {
+  margin: 0;
+  text-align: left;
+  .verticalpadding(54px, 31px);
+  font-size: @size-aboutus-itemtext;
+  font-weight: bold;
+  position: relative;
+}
+
+.seticon(about-us__features-item, 6);
+.about-us__features-item:first-child::after {
+  left: 8px;
+}
+.about-us__features-item:nth-child(3)::after {
+  left: 7px;
+  top: 5px;
+}
+.about-us__features-item:nth-child(4)::after {
+  left: 3px;
+  top: 3px;
+}
+.about-us__features-item:nth-child(5)::after {
+  left: -5px;
+  top: 4px;
+}
+.about-us__features-item:nth-child(6)::after {
+  left: 3px;
+  top: 2px;
+}
+
+@media @tablet-width { 
+  .about-us {
+    position: relative;
+    padding-top: 80px;
+  }
+  
+  .about-us::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 38px;
+      top: 10px;
+      left: 0;
+      background-size: contain;
+      background-repeat: repeat-x;
+      background-image: url("../../img/bg-zigzag-line.svg");
+  }
+  
+  .about-us__features-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 15px;
+  }
+  
+  .about-us__features-item {
+    width: 50%;
+    font-size: 20px;
+    padding-bottom: 55px;
+//    .outline();
+  }
+  
+  .about-us__features-item:nth-child(1) {
+    order: -3;
+  }
+
+  .about-us__features-item:nth-child(4) {
+    order: -2;
+  }
+  
+  .about-us__features-item:nth-child(5),
+  .about-us__features-item:nth-child(2),
+  {
+    order: -1;
+  }
+
+}
+
+@media @desktop-width { 
+  .about-us {
+    padding-top: 108px;
+  }
+  
+  .about-us__features-list {
+    margin: 0 auto;
+    width: 800px;
+  }
+  
+  .about-us::before {
+    top: 30px;
+  }
+}
+
